@@ -1,0 +1,1450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="bd_harbin@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="bd_harbin">
+      <ObjectId>1003502</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-12-08.11:53:41.377</IntrospectionTimestamp>
+      <IntrospectionStateNumber>44348539</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11215</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11216</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>11480</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="detalle_dev_id_seq">
+      <ObjectId>1058416</ObjectId>
+      <StateNumber>44348536</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="cargo_id_seq">
+      <ObjectId>1003510</ObjectId>
+      <StateNumber>44197428</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="11" parent="3" name="cliente_id_seq">
+      <ObjectId>1003516</ObjectId>
+      <StateNumber>44197431</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="12" parent="3" name="departamento_id_seq">
+      <ObjectId>1003518</ObjectId>
+      <StateNumber>44197433</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="13" parent="3" name="detalle_id_seq">
+      <ObjectId>1003523</ObjectId>
+      <StateNumber>44197436</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="14" parent="3" name="devolucion_id_seq">
+      <ObjectId>1050218</ObjectId>
+      <StateNumber>44348496</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="15" parent="3" name="direccion_id_seq">
+      <ObjectId>1003528</ObjectId>
+      <StateNumber>44197439</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="16" parent="3" name="nodos_intermedios_id_seq">
+      <ObjectId>1003533</ObjectId>
+      <StateNumber>44197442</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="17" parent="3" name="persona_id_seq">
+      <ObjectId>1003538</ObjectId>
+      <StateNumber>44197445</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="18" parent="3" name="personal_id_seq">
+      <ObjectId>1003544</ObjectId>
+      <StateNumber>44197448</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="19" parent="3" name="pre_venta_id_seq">
+      <ObjectId>1003550</ObjectId>
+      <StateNumber>44197451</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="20" parent="3" name="producto_id_seq">
+      <ObjectId>1003555</ObjectId>
+      <StateNumber>44197454</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="21" parent="3" name="puntos_id_seq">
+      <ObjectId>1003560</ObjectId>
+      <StateNumber>44197457</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="22" parent="3" name="recorrido_id_seq">
+      <ObjectId>1003565</ObjectId>
+      <StateNumber>44197460</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="23" parent="3" name="ruta_id_seq">
+      <ObjectId>1003570</ObjectId>
+      <StateNumber>44197463</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="24" parent="3" name="ruta_puntos_id_seq">
+      <ObjectId>1003575</ObjectId>
+      <StateNumber>44197466</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="25" parent="3" name="tipo_producto_id_seq">
+      <ObjectId>1003580</ObjectId>
+      <StateNumber>44197469</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="26" parent="3" name="tipo_usuario_id_seq">
+      <ObjectId>1003585</ObjectId>
+      <StateNumber>44197472</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="27" parent="3" name="usuario_id_seq">
+      <ObjectId>1003590</ObjectId>
+      <StateNumber>44197475</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="28" parent="3" name="vehiculo_chofer_id_seq">
+      <ObjectId>1003598</ObjectId>
+      <StateNumber>44197479</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="29" parent="3" name="vehiculo_id_seq">
+      <ObjectId>1003600</ObjectId>
+      <StateNumber>44197481</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="30" parent="3" name="zona_id_seq">
+      <ObjectId>1003605</ObjectId>
+      <StateNumber>44197484</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="31" parent="3" name="area">
+      <ObjectId>1003504</ObjectId>
+      <StateNumber>44197566</StateNumber>
+    </table>
+    <table id="32" parent="3" name="cargo">
+      <ObjectId>1003507</ObjectId>
+      <StateNumber>44197567</StateNumber>
+    </table>
+    <table id="33" parent="3" name="cliente">
+      <ObjectId>1003512</ObjectId>
+      <StateNumber>44197585</StateNumber>
+    </table>
+    <table id="34" parent="3" name="correlativo">
+      <ObjectId>1050244</ObjectId>
+      <StateNumber>44348497</StateNumber>
+    </table>
+    <table id="35" parent="3" name="detalle">
+      <ObjectId>1003520</ObjectId>
+      <StateNumber>44197569</StateNumber>
+    </table>
+    <table id="36" parent="3" name="detalle_dev">
+      <ObjectId>1058394</ObjectId>
+      <StateNumber>44348536</StateNumber>
+    </table>
+    <table id="37" parent="3" name="devolucion">
+      <ObjectId>1050220</ObjectId>
+      <StateNumber>44348539</StateNumber>
+    </table>
+    <table id="38" parent="3" name="direccion">
+      <ObjectId>1003525</ObjectId>
+      <StateNumber>44197568</StateNumber>
+    </table>
+    <table id="39" parent="3" name="nodos_intermedios">
+      <ObjectId>1003530</ObjectId>
+      <StateNumber>44197579</StateNumber>
+    </table>
+    <table id="40" parent="3" name="persona">
+      <ObjectId>1003535</ObjectId>
+      <StateNumber>44197573</StateNumber>
+    </table>
+    <table id="41" parent="3" name="personal">
+      <ObjectId>1003540</ObjectId>
+      <StateNumber>44197574</StateNumber>
+    </table>
+    <table id="42" parent="3" name="pre_venta">
+      <ObjectId>1003546</ObjectId>
+      <StateNumber>44348513</StateNumber>
+    </table>
+    <table id="43" parent="3" name="producto">
+      <ObjectId>1003552</ObjectId>
+      <StateNumber>44348496</StateNumber>
+    </table>
+    <table id="44" parent="3" name="puntos">
+      <ObjectId>1003557</ObjectId>
+      <StateNumber>44197576</StateNumber>
+    </table>
+    <table id="45" parent="3" name="recorrido">
+      <ObjectId>1003562</ObjectId>
+      <StateNumber>44197582</StateNumber>
+    </table>
+    <table id="46" parent="3" name="ruta">
+      <ObjectId>1003567</ObjectId>
+      <StateNumber>44348483</StateNumber>
+    </table>
+    <table id="47" parent="3" name="ruta_puntos">
+      <ObjectId>1003572</ObjectId>
+      <StateNumber>44197581</StateNumber>
+    </table>
+    <table id="48" parent="3" name="tipo_producto">
+      <ObjectId>1003577</ObjectId>
+      <StateNumber>44197575</StateNumber>
+    </table>
+    <table id="49" parent="3" name="tipo_usuario">
+      <ObjectId>1003582</ObjectId>
+      <StateNumber>44197583</StateNumber>
+    </table>
+    <table id="50" parent="3" name="usuario">
+      <ObjectId>1003587</ObjectId>
+      <StateNumber>44348496</StateNumber>
+    </table>
+    <table id="51" parent="3" name="vehiculo">
+      <ObjectId>1003592</ObjectId>
+      <StateNumber>44197584</StateNumber>
+    </table>
+    <table id="52" parent="3" name="vehiculo_chofer">
+      <ObjectId>1003595</ObjectId>
+      <StateNumber>44197584</StateNumber>
+    </table>
+    <table id="53" parent="3" name="zona">
+      <ObjectId>1003602</ObjectId>
+      <StateNumber>44197585</StateNumber>
+    </table>
+    <routine id="54" parent="3" name="f_anular_preventa">
+      <ObjectId>1003503</ObjectId>
+      <StateNumber>44197425</StateNumber>
+      <ArgumentsDefinition>p_preventa integer</ArgumentsDefinition>
+      <ResultsDefinition>integer</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <column id="55" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197486</StateNumber>
+      <SequenceName>departamento_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;departamento_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="56" parent="31" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>44197426</StateNumber>
+    </column>
+    <index id="57" parent="31" name="pk_dep">
+      <ObjectId>1003633</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="31" name="pk_dep">
+      <ObjectId>1003634</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_dep</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="59" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197487</StateNumber>
+      <SequenceName>cargo_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;cargo_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="60" parent="32" name="descripcion">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>44197427</StateNumber>
+    </column>
+    <index id="61" parent="32" name="pk_cargo">
+      <ObjectId>1003627</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="32" name="pk_cargo">
+      <ObjectId>1003628</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_cargo</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197488</StateNumber>
+      <SequenceName>cliente_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;cliente_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="64" parent="33" name="id_persona">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197430</StateNumber>
+    </column>
+    <column id="65" parent="33" name="dni_ruc">
+      <Position>3</Position>
+      <DataType>varchar(13)|0</DataType>
+      <StateNumber>44197430</StateNumber>
+    </column>
+    <column id="66" parent="33" name="persona_natural">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>44197430</StateNumber>
+    </column>
+    <column id="67" parent="33" name="empresa">
+      <Position>5</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>44197430</StateNumber>
+    </column>
+    <column id="68" parent="33" name="estado">
+      <Position>6</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197430</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+    </column>
+    <column id="69" parent="33" name="razon_social">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>44197430</StateNumber>
+    </column>
+    <column id="70" parent="33" name="id_zona">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>44197430</StateNumber>
+    </column>
+    <index id="71" parent="33" name="pk_dni_cliente">
+      <ObjectId>1003639</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="33" name="pk_dni_cliente">
+      <ObjectId>1003640</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_dni_cliente</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="73" parent="33" name="fk_dni_cliente">
+      <ObjectId>1003687</ObjectId>
+      <ColNames>id_persona</ColNames>
+      <RefTableName>persona</RefTableName>
+      <RefKeyName>pk_cliente</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="74" parent="33" name="fk_zona_cliente">
+      <ObjectId>1003762</ObjectId>
+      <ColNames>id_zona</ColNames>
+      <RefTableName>zona</RefTableName>
+      <RefKeyName>pk_zona</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="75" parent="34" name="tabla">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348497</StateNumber>
+    </column>
+    <column id="76" parent="34" name="secuencia">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348497</StateNumber>
+    </column>
+    <column id="77" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197489</StateNumber>
+      <SequenceName>detalle_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;detalle_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="78" parent="35" name="id_pre_venta">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197435</StateNumber>
+    </column>
+    <column id="79" parent="35" name="id_producto">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197435</StateNumber>
+    </column>
+    <column id="80" parent="35" name="cantidad">
+      <Position>4</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197435</StateNumber>
+    </column>
+    <column id="81" parent="35" name="precio">
+      <Position>5</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197435</StateNumber>
+    </column>
+    <column id="82" parent="35" name="importe">
+      <Position>6</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197435</StateNumber>
+    </column>
+    <foreign-key id="83" parent="35" name="fk_detalle_pv">
+      <ObjectId>1003682</ObjectId>
+      <ColNames>id_pre_venta</ColNames>
+      <RefTableName>pre_venta</RefTableName>
+      <RefKeyName>pk_pre_venta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="84" parent="36" name="producto_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348516</StateNumber>
+    </column>
+    <column id="85" parent="36" name="cantidad">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348516</StateNumber>
+    </column>
+    <column id="86" parent="36" name="devolucion_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348516</StateNumber>
+    </column>
+    <column id="87" parent="36" name="id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348536</StateNumber>
+      <SequenceName>detalle_dev_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;detalle_dev_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="88" parent="36" name="pk_detallaedev">
+      <ObjectId>1058422</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="36" name="pk_detallaedev">
+      <ObjectId>1058423</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_detallaedev</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="36" name="fk_detalle_dev">
+      <ObjectId>1058399</ObjectId>
+      <ColNames>devolucion_id</ColNames>
+      <RefTableName>devolucion</RefTableName>
+      <RefKeyName>devolucion_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="91" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348496</StateNumber>
+      <SequenceName>devolucion_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;devolucion_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="92" parent="37" name="pedido_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348496</StateNumber>
+    </column>
+    <column id="93" parent="37" name="usuario_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348496</StateNumber>
+    </column>
+    <column id="94" parent="37" name="fecha">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348496</StateNumber>
+    </column>
+    <column id="95" parent="37" name="motivo">
+      <Position>6</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348496</StateNumber>
+    </column>
+    <column id="96" parent="37" name="descripcion">
+      <Position>7</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>44348496</StateNumber>
+    </column>
+    <column id="97" parent="37" name="tiempo_maximo">
+      <Position>8</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>44348496</StateNumber>
+    </column>
+    <column id="98" parent="37" name="estado">
+      <Position>9</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44348496</StateNumber>
+    </column>
+    <column id="99" parent="37" name="code">
+      <Position>11</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>44348515</StateNumber>
+    </column>
+    <column id="100" parent="37" name="responsable">
+      <Position>12</Position>
+      <DataType>varchar(130)|0</DataType>
+      <StateNumber>44348539</StateNumber>
+    </column>
+    <index id="101" parent="37" name="devolucion_pkey">
+      <ObjectId>1050227</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="102" parent="37" name="devolucion_pkey">
+      <ObjectId>1050228</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>devolucion_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="103" parent="37" name="fk_pedido_dev">
+      <ObjectId>1050229</ObjectId>
+      <ColNames>pedido_id</ColNames>
+      <RefTableName>pre_venta</RefTableName>
+      <RefKeyName>pk_pre_venta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="104" parent="37" name="fk_usuario_dev">
+      <ObjectId>1050234</ObjectId>
+      <ColNames>usuario_id</ColNames>
+      <RefTableName>usuario</RefTableName>
+      <RefKeyName>pk_usuario</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="105" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197490</StateNumber>
+      <SequenceName>direccion_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;direccion_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="106" parent="38" name="id_cliente">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197438</StateNumber>
+    </column>
+    <column id="107" parent="38" name="direccion_completa">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+      <StateNumber>44197438</StateNumber>
+    </column>
+    <column id="108" parent="38" name="latitud">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>44197438</StateNumber>
+    </column>
+    <column id="109" parent="38" name="longitud">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>44197438</StateNumber>
+    </column>
+    <index id="110" parent="38" name="pk_direccion">
+      <ObjectId>1003637</ObjectId>
+      <ColNames>id
+id_cliente</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="111" parent="38" name="pk_direccion">
+      <ObjectId>1003638</ObjectId>
+      <ColNames>id
+id_cliente</ColNames>
+      <UnderlyingIndexName>pk_direccion</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="112" parent="38" name="fk_cliente_direccion">
+      <ObjectId>1003677</ObjectId>
+      <ColNames>id_cliente</ColNames>
+      <RefTableName>cliente</RefTableName>
+      <RefKeyName>pk_dni_cliente</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="113" parent="39" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197491</StateNumber>
+      <SequenceName>nodos_intermedios_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;nodos_intermedios_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="114" parent="39" name="nodo_letra">
+      <Position>2</Position>
+      <DataType>char|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197441</StateNumber>
+    </column>
+    <column id="115" parent="39" name="nodo_valor_lng">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>44197441</StateNumber>
+    </column>
+    <column id="116" parent="39" name="nodo_valor_lat">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>44197441</StateNumber>
+    </column>
+    <column id="117" parent="39" name="id_ruta">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197441</StateNumber>
+    </column>
+    <column id="118" parent="39" name="id_pedido">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>44197441</StateNumber>
+    </column>
+    <index id="119" parent="39" name="pk_nodos_intermedios">
+      <ObjectId>1003641</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="120" parent="39" name="pk_nodos_intermedios">
+      <ObjectId>1003642</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_nodos_intermedios</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="121" parent="39" name="fk_ruta">
+      <ObjectId>1003732</ObjectId>
+      <ColNames>id_ruta</ColNames>
+      <RefTableName>ruta</RefTableName>
+      <RefKeyName>pk_ruta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="122" parent="39" name="fk_nodo_pre_venta">
+      <ObjectId>1003692</ObjectId>
+      <ColNames>id_pedido</ColNames>
+      <RefTableName>pre_venta</RefTableName>
+      <RefKeyName>pk_pre_venta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="123" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197492</StateNumber>
+      <SequenceName>persona_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;persona_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="124" parent="40" name="dni">
+      <Position>2</Position>
+      <DataType>char(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <column id="125" parent="40" name="apellidos">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <column id="126" parent="40" name="nombres">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <column id="127" parent="40" name="fecha_nacimiento">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <column id="128" parent="40" name="direccion">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <column id="129" parent="40" name="telefono">
+      <Position>7</Position>
+      <DataType>varchar(12)|0</DataType>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <column id="130" parent="40" name="email">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <column id="131" parent="40" name="cliente">
+      <Position>9</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <column id="132" parent="40" name="trabajador">
+      <Position>10</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>44197444</StateNumber>
+    </column>
+    <index id="133" parent="40" name="pk_cliente">
+      <ObjectId>1003629</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="40" name="pk_cliente">
+      <ObjectId>1003630</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_cliente</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="135" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197493</StateNumber>
+      <SequenceName>personal_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;personal_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="136" parent="41" name="id_persona">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197447</StateNumber>
+    </column>
+    <column id="137" parent="41" name="id_area">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197447</StateNumber>
+    </column>
+    <column id="138" parent="41" name="id_cargo">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197447</StateNumber>
+    </column>
+    <column id="139" parent="41" name="fecha_inicio">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>44197447</StateNumber>
+    </column>
+    <column id="140" parent="41" name="fecha_fin">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>44197447</StateNumber>
+    </column>
+    <column id="141" parent="41" name="estado">
+      <Position>7</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197447</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+    </column>
+    <index id="142" parent="41" name="pk_personal">
+      <ObjectId>1003645</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="143" parent="41" name="pk_personal">
+      <ObjectId>1003646</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_personal</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="144" parent="41" name="fk_persona_personal">
+      <ObjectId>1003702</ObjectId>
+      <ColNames>id_persona</ColNames>
+      <RefTableName>persona</RefTableName>
+      <RefKeyName>pk_cliente</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="145" parent="41" name="fk_area">
+      <ObjectId>1003667</ObjectId>
+      <ColNames>id_area</ColNames>
+      <RefTableName>area</RefTableName>
+      <RefKeyName>pk_dep</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="146" parent="41" name="fk_cargo">
+      <ObjectId>1003672</ObjectId>
+      <ColNames>id_cargo</ColNames>
+      <RefTableName>cargo</RefTableName>
+      <RefKeyName>pk_cargo</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="147" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197494</StateNumber>
+      <SequenceName>pre_venta_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;pre_venta_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="148" parent="42" name="id_cliente">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="149" parent="42" name="id_usuario">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="150" parent="42" name="fecha">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="151" parent="42" name="hora">
+      <Position>5</Position>
+      <DataType>time|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="152" parent="42" name="sub_total">
+      <Position>6</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="153" parent="42" name="igv">
+      <Position>7</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="154" parent="42" name="total">
+      <Position>8</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="155" parent="42" name="estado">
+      <Position>9</Position>
+      <DataType>char|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="156" parent="42" name="estado_seguimiento">
+      <Position>10</Position>
+      <DataType>char|0</DataType>
+      <StateNumber>44197450</StateNumber>
+      <DefaultExpression>&apos;P&apos;::bpchar</DefaultExpression>
+    </column>
+    <column id="157" parent="42" name="fecha_entrega">
+      <Position>11</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>44197450</StateNumber>
+    </column>
+    <column id="158" parent="42" name="code">
+      <Position>12</Position>
+      <DataType>varchar(15)|0</DataType>
+      <StateNumber>44348513</StateNumber>
+    </column>
+    <index id="159" parent="42" name="pk_pre_venta">
+      <ObjectId>1003647</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="160" parent="42" name="pk_pre_venta">
+      <ObjectId>1003648</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_pre_venta</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="161" parent="42" name="fk_pv_cliente">
+      <ObjectId>1003722</ObjectId>
+      <ColNames>id_cliente</ColNames>
+      <RefTableName>cliente</RefTableName>
+      <RefKeyName>pk_dni_cliente</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="162" parent="42" name="fk_pv_usuario">
+      <ObjectId>1003727</ObjectId>
+      <ColNames>id_usuario</ColNames>
+      <RefTableName>usuario</RefTableName>
+      <RefKeyName>pk_usuario</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="163" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197495</StateNumber>
+      <SequenceName>producto_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;producto_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="164" parent="43" name="id_tipo">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197453</StateNumber>
+    </column>
+    <column id="165" parent="43" name="nombre">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197453</StateNumber>
+    </column>
+    <column id="166" parent="43" name="unidad_medida">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197453</StateNumber>
+    </column>
+    <column id="167" parent="43" name="cantidad">
+      <Position>5</Position>
+      <DataType>numeric(7,3)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197453</StateNumber>
+    </column>
+    <column id="168" parent="43" name="precio">
+      <Position>6</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197453</StateNumber>
+    </column>
+    <index id="169" parent="43" name="pk_producto">
+      <ObjectId>1003649</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="170" parent="43" name="pk_producto">
+      <ObjectId>1003650</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_producto</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="171" parent="43" name="fk_pro_tipopro">
+      <ObjectId>1003712</ObjectId>
+      <ColNames>id_tipo</ColNames>
+      <RefTableName>tipo_producto</RefTableName>
+      <RefKeyName>pk_tipo_producto</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="172" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197496</StateNumber>
+      <SequenceName>puntos_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;puntos_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="173" parent="44" name="direccion">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>44197456</StateNumber>
+    </column>
+    <column id="174" parent="44" name="latitud">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>44197456</StateNumber>
+    </column>
+    <column id="175" parent="44" name="longitud">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>44197456</StateNumber>
+    </column>
+    <column id="176" parent="44" name="tipo">
+      <Position>5</Position>
+      <DataType>char|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197456</StateNumber>
+    </column>
+    <index id="177" parent="44" name="pk_p_inicio">
+      <ObjectId>1003643</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="178" parent="44" name="pk_p_inicio">
+      <ObjectId>1003644</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_p_inicio</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="179" parent="45" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197497</StateNumber>
+      <SequenceName>recorrido_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;recorrido_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="180" parent="45" name="nodo1">
+      <Position>2</Position>
+      <DataType>char|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197459</StateNumber>
+    </column>
+    <column id="181" parent="45" name="nodo2">
+      <Position>3</Position>
+      <DataType>char|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197459</StateNumber>
+    </column>
+    <column id="182" parent="45" name="distancia">
+      <Position>4</Position>
+      <DataType>numeric(14,4)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197459</StateNumber>
+    </column>
+    <column id="183" parent="45" name="id_ruta">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197459</StateNumber>
+    </column>
+    <index id="184" parent="45" name="pk_recorrido">
+      <ObjectId>1003651</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="185" parent="45" name="pk_recorrido">
+      <ObjectId>1003652</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_recorrido</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="186" parent="45" name="fk_ruta_recorrido">
+      <ObjectId>1003747</ObjectId>
+      <ColNames>id_ruta</ColNames>
+      <RefTableName>ruta</RefTableName>
+      <RefKeyName>pk_ruta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="187" parent="46" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197498</StateNumber>
+      <SequenceName>ruta_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;ruta_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="188" parent="46" name="nodo_inicio_letra">
+      <Position>2</Position>
+      <DataType>char|0</DataType>
+      <StateNumber>44197462</StateNumber>
+    </column>
+    <column id="189" parent="46" name="nodo_inicio_valor">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+      <StateNumber>44197462</StateNumber>
+    </column>
+    <column id="190" parent="46" name="nodo_final_letra">
+      <Position>4</Position>
+      <DataType>char|0</DataType>
+      <StateNumber>44197462</StateNumber>
+    </column>
+    <column id="191" parent="46" name="nodo_final_valor">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+      <StateNumber>44197462</StateNumber>
+    </column>
+    <column id="192" parent="46" name="distancia_total">
+      <Position>6</Position>
+      <DataType>numeric(14,4)|0</DataType>
+      <StateNumber>44197462</StateNumber>
+    </column>
+    <column id="193" parent="46" name="id_vehiculo_chofer">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>44197462</StateNumber>
+    </column>
+    <column id="194" parent="46" name="fecha">
+      <Position>8</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>44197462</StateNumber>
+    </column>
+    <column id="195" parent="46" name="costo_total">
+      <Position>9</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <StateNumber>44348466</StateNumber>
+    </column>
+    <column id="196" parent="46" name="costo_galon">
+      <Position>10</Position>
+      <DataType>numeric(7,2)|0</DataType>
+      <StateNumber>44348466</StateNumber>
+    </column>
+    <column id="197" parent="46" name="km_recorrido">
+      <Position>11</Position>
+      <DataType>varchar(15)|0</DataType>
+      <StateNumber>44348483</StateNumber>
+    </column>
+    <index id="198" parent="46" name="pk_ruta">
+      <ObjectId>1003653</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="199" parent="46" name="pk_ruta">
+      <ObjectId>1003654</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_ruta</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="200" parent="46" name="fk_ruta">
+      <ObjectId>1003737</ObjectId>
+      <ColNames>id_vehiculo_chofer</ColNames>
+      <RefTableName>vehiculo_chofer</RefTableName>
+      <RefKeyName>pk_cv</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="201" parent="47" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197499</StateNumber>
+      <SequenceName>ruta_puntos_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;ruta_puntos_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="202" parent="47" name="id_ruta">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197465</StateNumber>
+    </column>
+    <column id="203" parent="47" name="id_puntos">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197465</StateNumber>
+    </column>
+    <index id="204" parent="47" name="pk_ruta_puntos">
+      <ObjectId>1003655</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="205" parent="47" name="pk_ruta_puntos">
+      <ObjectId>1003656</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_ruta_puntos</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="206" parent="47" name="fk_ruta">
+      <ObjectId>1003742</ObjectId>
+      <ColNames>id_ruta</ColNames>
+      <RefTableName>ruta</RefTableName>
+      <RefKeyName>pk_ruta</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="207" parent="47" name="fk_puntos">
+      <ObjectId>1003717</ObjectId>
+      <ColNames>id_puntos</ColNames>
+      <RefTableName>puntos</RefTableName>
+      <RefKeyName>pk_p_inicio</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="208" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197500</StateNumber>
+      <SequenceName>tipo_producto_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;tipo_producto_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="209" parent="48" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197468</StateNumber>
+    </column>
+    <index id="210" parent="48" name="pk_tipo_producto">
+      <ObjectId>1003657</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="211" parent="48" name="pk_tipo_producto">
+      <ObjectId>1003658</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_tipo_producto</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="212" parent="49" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197501</StateNumber>
+      <SequenceName>tipo_usuario_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;tipo_usuario_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="213" parent="49" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(80)|0</DataType>
+      <StateNumber>44197471</StateNumber>
+    </column>
+    <index id="214" parent="49" name="pk_tipo_usuario">
+      <ObjectId>1003659</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="215" parent="49" name="pk_tipo_usuario">
+      <ObjectId>1003660</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_tipo_usuario</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="216" parent="50" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197502</StateNumber>
+      <SequenceName>usuario_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;usuario_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="217" parent="50" name="id_persona">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197474</StateNumber>
+    </column>
+    <column id="218" parent="50" name="id_tipo_usuario">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197474</StateNumber>
+    </column>
+    <column id="219" parent="50" name="login">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197474</StateNumber>
+    </column>
+    <column id="220" parent="50" name="password">
+      <Position>5</Position>
+      <DataType>varchar(64)|0</DataType>
+      <StateNumber>44197474</StateNumber>
+    </column>
+    <column id="221" parent="50" name="estado">
+      <Position>6</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197474</StateNumber>
+    </column>
+    <column id="222" parent="50" name="password_cliente">
+      <Position>7</Position>
+      <DataType>varchar(64)|0</DataType>
+      <StateNumber>44197474</StateNumber>
+    </column>
+    <column id="223" parent="50" name="password_personal">
+      <Position>8</Position>
+      <DataType>varchar(64)|0</DataType>
+      <StateNumber>44197474</StateNumber>
+    </column>
+    <index id="224" parent="50" name="pk_usuario">
+      <ObjectId>1003661</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="225" parent="50" name="pk_usuario">
+      <ObjectId>1003662</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_usuario</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="226" parent="50" name="fk_persona">
+      <ObjectId>1003697</ObjectId>
+      <ColNames>id_persona</ColNames>
+      <RefTableName>persona</RefTableName>
+      <RefKeyName>pk_cliente</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="227" parent="50" name="fk_tipo_usuario">
+      <ObjectId>1003752</ObjectId>
+      <ColNames>id_tipo_usuario</ColNames>
+      <RefTableName>tipo_usuario</RefTableName>
+      <RefKeyName>pk_tipo_usuario</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="228" parent="51" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197503</StateNumber>
+      <SequenceName>vehiculo_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;vehiculo_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="229" parent="51" name="placa">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197477</StateNumber>
+    </column>
+    <column id="230" parent="51" name="modelo">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197477</StateNumber>
+    </column>
+    <column id="231" parent="51" name="marca">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197477</StateNumber>
+    </column>
+    <column id="232" parent="51" name="aka">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>44197477</StateNumber>
+    </column>
+    <column id="233" parent="51" name="peso">
+      <Position>6</Position>
+      <DataType>numeric(7,3)|0</DataType>
+      <StateNumber>44197477</StateNumber>
+    </column>
+    <column id="234" parent="51" name="estado">
+      <Position>7</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>44197477</StateNumber>
+    </column>
+    <index id="235" parent="51" name="pk_vehiculo">
+      <ObjectId>1003663</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="236" parent="51" name="pk_vehiculo">
+      <ObjectId>1003664</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_vehiculo</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="237" parent="52" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197504</StateNumber>
+      <SequenceName>vehiculo_chofer_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;vehiculo_chofer_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="238" parent="52" name="id_vehiculo">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197478</StateNumber>
+    </column>
+    <column id="239" parent="52" name="id_personal">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197478</StateNumber>
+    </column>
+    <column id="240" parent="52" name="fecha">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197478</StateNumber>
+    </column>
+    <column id="241" parent="52" name="hora_inicio">
+      <Position>5</Position>
+      <DataType>time|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197478</StateNumber>
+    </column>
+    <column id="242" parent="52" name="hora_fin">
+      <Position>6</Position>
+      <DataType>time|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197478</StateNumber>
+    </column>
+    <index id="243" parent="52" name="pk_cv">
+      <ObjectId>1003631</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="244" parent="52" name="pk_cv">
+      <ObjectId>1003632</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_cv</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="245" parent="52" name="fk_vehiculo">
+      <ObjectId>1003757</ObjectId>
+      <ColNames>id_vehiculo</ColNames>
+      <RefTableName>vehiculo</RefTableName>
+      <RefKeyName>pk_vehiculo</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="246" parent="52" name="fk_personal">
+      <ObjectId>1003707</ObjectId>
+      <ColNames>id_personal</ColNames>
+      <RefTableName>personal</RefTableName>
+      <RefKeyName>pk_personal</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="247" parent="53" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>44197505</StateNumber>
+      <SequenceName>zona_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;zona_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="248" parent="53" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>44197483</StateNumber>
+    </column>
+    <index id="249" parent="53" name="pk_zona">
+      <ObjectId>1003665</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="250" parent="53" name="pk_zona">
+      <ObjectId>1003666</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_zona</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <argument id="251" parent="54" name="p_preventa">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+    </argument>
+    <argument id="252" parent="54">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>integer|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
