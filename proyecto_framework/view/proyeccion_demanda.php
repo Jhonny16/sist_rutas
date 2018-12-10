@@ -56,6 +56,22 @@ require_once 'validar.datos.sesion.view.php';
                                 <div class="x_content">
                                     <div class="row">
                                         <!-- form input mask -->
+                                        <div class="col-md-4 col-sm-12 col-xs-12">
+                                            <div class="x_panel">
+                                                <div class="x_title">
+                                                    <h2>Búsqueda por Fecha</h2>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                                <div class="x_content">
+                                                    <select name="" id="combo_clientes" class="form-control">
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
                                         <div class="col-md-8 col-sm-12 col-xs-12">
                                             <div class="x_panel">
                                                 <div class="x_title">

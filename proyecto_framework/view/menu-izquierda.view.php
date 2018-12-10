@@ -31,20 +31,28 @@
                 <ul class="nav side-menu">
                     <li><a href="principal.view.php"><i class="fa fa-desktop"></i> Principal </a>                  
                     </li>
-                    <?php
-                    if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='5'){
-                        echo'<li><a><i class="fa fa-user-plus"></i>Mantenimientos<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-user-plus"></i>Mantenimientos<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="persona.view.php">Cliente/Trab./Usuario</a></li>   
-                            <li><a href="producto.view.php">Productos</a></li>  
-                               <li><a href="vehiculo.view.php">Vehículos</a></li>
-                        </ul>                        
-                    </li>        ';
+                            <?php
+                            if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='3' || $codigoTipoUsuario=='5'){
+                                echo'   <li><a href="persona.view.php">Cliente/Trab./Usuario</a></li>  ';
+                            }
+                            ?>
+                            <?php
+                            if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='3' || $codigoTipoUsuario=='5' || $codigoTipoUsuario=='6'){
+                                echo'  <li><a href="producto.view.php">Productos</a></li> ';
+                            }
+                            ?>
+                            <?php
+                            if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='3' || $codigoTipoUsuario=='5'){
+                                echo'   <li><a href="vehiculo.view.php">Vehículos</a></li>  ';
+                            }
+                            ?>
+                        </ul>
+                    </li>
 
-                    }
-                    ?>
                     <?php
-                    if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' ){
+                    if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='3' || $codigoTipoUsuario=='5'){
                         echo'   <li><a><i class="fa fa-hand-o-down"></i>Localizaciones<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="cliente.ubicacion.view.php">Validar dirección</a></li>
@@ -55,7 +63,7 @@
                     ?>
 
                     <?php
-                    if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='5' ){
+                    if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='3' || $codigoTipoUsuario=='5' ){
                         echo'  <li><a><i class="fa fa-shopping-cart"></i>Pre Ventas<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="pre-venta.view.php">Nueva Pre-Venta</a></li>
@@ -67,7 +75,7 @@
                     }
                     ?>
                     <?php
-                    if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='5' ){
+                    if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='5'|| $codigoTipoUsuario=='3' || $codigoTipoUsuario=='4' ){
                         echo'   <li><a><i class="fa fa-truck"></i>Devolución<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="devolucion.php">Nueva Devolución</a></li>
@@ -77,17 +85,21 @@
 
                     }
                     ?>
-                    <?php
-                    if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' ){
-                        echo'   <li><a><i class="fa fa-map-marker"></i>Rutas<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-map-marker"></i>Rutas<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="algoritmo_wizard.php">Generar Ruta</a></li>
-                            <li><a href="algoritmo_mapa.php">Lista Rutas</a></li>
+                            <?php
+                            if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='6'){
+                                echo'   <li><a href="algoritmo_wizard.php">Generar Ruta</a></li> ';
+                            }
+                            ?>
+                            <?php
+                            if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' || $codigoTipoUsuario=='6' || $codigoTipoUsuario=='7' ){
+                                echo' <li><a href="algoritmo_mapa.php">Lista Rutas</a></li>';
+                            }
+                            ?>
                         </ul>
-                    </li>   ';
+                    </li>
 
-                    }
-                    ?>
                     <?php
                     if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' ){
                         echo'   <li><a><i class="fa fa-file-pdf-o"></i>Reportes<span class="fa fa-chevron-down"></span></a>
@@ -103,7 +115,6 @@
 
                     }
                     ?>
-
                     <?php
                     if($codigoTipoUsuario=='1' || $codigoTipoUsuario=='2' ){
                         echo'   <li><a><i class="fa fa-users"></i>Conf. Usuarios<span class="fa fa-chevron-down"></span></a>

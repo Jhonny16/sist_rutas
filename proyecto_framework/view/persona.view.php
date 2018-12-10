@@ -316,6 +316,7 @@ require_once 'validar.datos.sesion.view.php';
                                                             </small>
                                                         </div>
                                                         <div class="modal-footer">
+                                                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal" id="btn_close_persona">Cerrar</button>
                                                             <button type="button" onclick="guardar_datos()" class="btn btn-success" aria-hidden="true">Guardar</button>
                                                         </div>
 

@@ -201,18 +201,77 @@ class Producto extends Conexion {
         }
     }
 
-    public function lista($fecha1, $fecha2) {
+    public function lista($fecha1, $fecha2,$cliente_id) {
         try {
             $sql = "
-                  select p.id, p.nombre,SUM(d.importe) as monto_total,SUM(d.cantidad) as cantidad_vendida, count(pv.*) as num_ventas
+                  select p.id, p.nombre,SUM(d.importe) as monto_total,SUM(d.cantidad) as cantidad_vendida, count(pv.*) as num_ventas                
                 from pre_venta pv
                   inner join detalle d on d.id_pre_venta =pv.id
                 inner join producto p on d.id_producto= p.id
-                  where pv.estado_seguimiento = 'E' and (pv.fecha BETWEEN :p_fecha1 and :p_fecha2)
+                inner join cliente c on pv.id_cliente = c.id
+                  where pv.estado_seguimiento = 'E' and (pv.fecha BETWEEN :p_fecha1 and :p_fecha2) and c.id = :p_cliente
                   GROUP BY p.id, p.nombre ";
             $sentencia = $this->dblink->prepare($sql);
             $sentencia->bindParam(":p_fecha1", $fecha1);
             $sentencia->bindParam(":p_fecha2", $fecha2);
+            $sentencia->bindParam(":p_cliente", $cliente_id);
+            $sentencia->execute();
+            $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+            return $resultado;
+        } catch (Exception $exc) {
+            throw $exc;
+        }
+    }
+
+    public function details($id, $anio, $cliente_id){
+        try {
+            $sql = "
+                 select p.id, p.nombre,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 1 and p.id = 8 and c.id = :p_cliente) as enero,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 2 and p.id = 8 and c.id = :p_cliente) as febrero,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 3 and p.id = 8 and c.id = :p_cliente) as marzo,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 4 and p.id = 8  and c.id = :p_cliente) as abril,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 5 and p.id = 8 and c.id = :p_cliente) as mayo,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 6 and p.id = 8 and c.id = :p_cliente) as junio,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 7 and p.id = 8 and c.id = :p_cliente) as julio,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 8 and p.id = 8 and c.id = :p_cliente) as agosto,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 9 and p.id = 8 and c.id = :p_cliente) as setiembre,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 10 and p.id = 8 and c.id = :p_cliente) as octubre,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id inner join cliente c on pv.id_cliente = c.id where pv.estado_seguimiento = 'E' and
+                                                       extract(MONTH from pv.fecha) = 11 and p.id = 8 and c.id = :p_cliente) as noviembre,
+  (select SUM(d.cantidad) from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+    inner join producto p on d.id_producto= p.id  inner join cliente c on pv.id_cliente = c.id
+  where pv.estado_seguimiento = 'E' and extract(MONTH from pv.fecha) = 12 and p.id = 8 and c.id = :p_cliente) as diciembre
+from pre_venta pv inner join detalle d on d.id_pre_venta =pv.id
+  inner join producto p on d.id_producto= p.id
+  inner join cliente c on pv.id_cliente = c.id
+  where extract(YEAR from pv.fecha) = :p_anio and p.id = :p_id and c.id = :p_cliente
+GROUP BY p.id,p.nombre ";
+            $sentencia = $this->dblink->prepare($sql);
+            $sentencia->bindParam(":p_id", $id);
+            $sentencia->bindParam(":p_anio", $anio);
+            $sentencia->bindParam(":p_cliente", $cliente_id);
             $sentencia->execute();
             $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
             return $resultado;

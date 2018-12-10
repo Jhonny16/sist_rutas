@@ -172,7 +172,7 @@ function agregar_editar_persona() {
         if (datosJSON.estado === 200) {
             swal("Exito", datosJSON.mensaje, "success");
             listado_persona();
-            $("#btncerrar").click(); //Cerrar la ventana 
+            window.location = 'persona.view.php';
 
             //listar_persona(); //actualizar la lista
         } else {
