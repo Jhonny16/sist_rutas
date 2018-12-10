@@ -107,7 +107,7 @@ class PreVenta extends Conexion {
                      (case when  :p_fecha=1 then  (pv.fecha between :p_fecha1 and :p_fecha2)
                      else (pv.fecha_entrega between :p_fecha1 and :p_fecha2 )end) and
                     (case when  :p_zona = 0 then true else z.id = :p_zona end) and
-                    (case when  :p_estado = 'P' then pv.estado_seguimiento='P' else pv.estado_seguimiento='E' end)
+                    (pv.estado_seguimiento = :p_estado)
                     order by 1 desc
                 ";
             $sentencia = $this->dblink->prepare($sql);

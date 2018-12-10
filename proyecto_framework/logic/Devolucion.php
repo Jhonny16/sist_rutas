@@ -321,4 +321,22 @@ class Devolucion extends Conexion
             throw $exc;
         }
     }
+
+
+
+    public function detalle($id) {
+        try {
+            $sql = "select p.id, p.nombre, det.cantidad
+                    from detalle_dev det inner join producto p on p.id = det.producto_id
+                    where det.devolucion_id = :p_id ";
+
+            $sentencia = $this->dblink->prepare($sql);
+            $sentencia->bindParam(":p_id",$id);
+            $sentencia->execute();
+            $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+            return $resultado;
+        } catch (Exception $exc) {
+            throw $exc;
+        }
+    }
 }

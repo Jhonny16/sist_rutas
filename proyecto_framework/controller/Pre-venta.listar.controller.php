@@ -15,7 +15,7 @@ try {
             
         )
     {
-            Help::imprimeJSON(500, "Falta enviar parametros", "");
+            Helper::imprimeJSON(500, "Falta enviar parametros", "");
             exit();
     }
     

@@ -95,9 +95,10 @@ require_once 'validar.datos.sesion.view.php';
                                         <div class="row">
                                             Seleccione
                                             <p>
-                                                Pendiente:<input type="radio" class="flat" name="gender" id="busq_ep" value="P" checked="" required /> 
+                                                Pendiente:<input type="radio" class="flat" name="gender" id="busq_ep" value="P" checked="" required />
+                                                Parcial:<input type="radio" class="flat" name="gender" id="busq_en" value="N" />
                                                 Entregado:<input type="radio" class="flat" name="gender" id="busq_ee" value="E" />
-                                            </p>                                 
+                                            </p>
                                         </div>                                        
                                     </div>
                                 </div>

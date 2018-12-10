@@ -173,6 +173,7 @@ require_once 'validar.datos.sesion.view.php';
                 <?php include_once 'pie.view.php'; ?>
                 <!-- /footer content -->
             </div>
+            <?php require_once 'modal_detalle_devolucion.php'; ?>
         </div>
 
         <?php include_once 'scripts.view.php'; ?>

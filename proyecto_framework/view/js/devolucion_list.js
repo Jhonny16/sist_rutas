@@ -69,7 +69,7 @@ function listar_dev() {
             html += '<table id="tabla_lista_dev" class="table table-bordered" >';
             html += '<thead>';
             html += '<tr style="background-color: #f9f9f9; height:25px;">';
-            html += '<th style="text-align: center; color:#26B99A" >OPCIONES</th>';
+            html += '<th style="text-align: center; color:#26B99A" >DET</th>';
             html += '<th style="color:#26B99A">N-PEDIDO</th>';
             html += '<th style="color:#26B99A">N-DEVOCION</th>';
             html += '<th style="color:#26B99A">FECHA</th>';
@@ -86,7 +86,9 @@ function listar_dev() {
             //Detalle
             $.each(datosJSON.datos, function (i, item) {
 
-                html += '<td>' + item.id + '</td>';
+                html += '<td style="text-align: center"><a title="Ver detalle de Pre-Venta"  data-toggle="modal" data-target="#mdl_det_devolucion" ' +
+                    'onclick="detail_dev(' + item.id + ')" onmouseover="" style="cursor: pointer;" >' +
+                    '<i class="fa fa-th-list text-success"></i></a></td>';
                 html += '<td>' + item.pedido + '</td>';
                 html += '<td>' + item.devolucion+ '</td>';
                 html += '<td>' + item.fecha + '</td>';
@@ -115,5 +117,40 @@ function listar_dev() {
         var datosJSON = $.parseJSON(error.responseText);
         //swal("Error", datosJSON.mensaje , "error");
     });
+}
+
+function detail_dev(id) {
+    //$("#detail_devolucion").empty();
+    $("#detail_devolucion").html("");
+    $.post
+    (
+        "../controller/Devolucion.detalle.listar.controller.php",{'p_id': id}
+
+
+    ).done(function (resultado) {
+        var datosJSON = resultado;
+
+        if (datosJSON.estado === 200) {
+            var html = "";
+            //Detalle
+            $.each(datosJSON.datos, function (i, item) {
+
+                html += '<td>' + item.id + '</td>';
+                html += '<td>' + item.nombre + '</td>';
+                html += '<td>' + item.cantidad + '</td>';
+                html += '</tr>';
+            });
+            html += '</tbody>';
+            html += '</table>';
+            $("#detail_devolucion").html(html);
+        } else {
+            swal("Nota", "No se encontraron resultados en la búsqueda", "info");
+        }
+
+    }).fail(function (error) {
+        var datosJSON = $.parseJSON(error.responseText);
+        //swal("Error", datosJSON.mensaje , "error");
+    });
+    
 }
 

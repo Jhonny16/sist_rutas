@@ -15,6 +15,9 @@ $('#busq_ep').on('ifChecked', function (event) {
 $('#busq_ee').on('ifChecked', function (event) {
     estado = $("#busq_ee").val();
 });
+$('#busq_en').on('ifChecked', function (event) {
+    estado = $("#busq_en").val();
+});
 
 
 
@@ -37,18 +40,19 @@ function listar() {
         p_zona = zona;
     }
 
+    var data =  {
+        p_fecha: p_fecha,
+        p_fecha1: fecha1,
+        p_fecha2: fecha2,
+        p_estado : estado,
+        p_zona : p_zona
 
+    };
+    console.log(data);
     $.post
             (
-                    "../controller/Pre-venta.listar.controller.php",
-                    {
-                        p_fecha: p_fecha,
-                        p_fecha1: fecha1,
-                        p_fecha2: fecha2,
-                        p_estado : estado,
-                        p_zona : p_zona
-                        
-                    }
+                    "../controller/Pre-venta.listar.controller.php",data
+
 
             ).done(function (resultado) {
         var datosJSON = resultado;
