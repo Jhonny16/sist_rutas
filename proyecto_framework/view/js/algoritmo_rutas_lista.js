@@ -94,6 +94,8 @@ function listar_rutas() {
 }
 
 var contentString = '';
+var unidad = '';
+var chofer = '';
 function lista_trayectoria(id) {
     array_mark = [];
     init_mapa();
@@ -116,8 +118,8 @@ function lista_trayectoria(id) {
     
 
 
-    var unidad = array_ruta.datos[aux].unidad;
-    var chofer = array_ruta.datos[aux].chofer;
+    unidad = array_ruta.datos[aux].unidad;
+    chofer = array_ruta.datos[aux].chofer;
     contentString = '<b>Unidad:</b>' + unidad + '<br>\n\
                         \<b>Chofer:</b>' + chofer + '<br>\n\
                           ';
