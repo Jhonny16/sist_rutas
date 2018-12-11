@@ -9,12 +9,8 @@ function init_mapa() {
         zoom: 13,
         mapTypeId: 'roadmap'
     });
-
     infowindow = new google.maps.InfoWindow();
-
-
 }
-
 function mostrando_ruta() {
     console.log("dibujando ruta");
 
@@ -72,15 +68,13 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, array_ma
         icon: {
             url: "../images/p_final.png",
             scaledSize: new google.maps.Size(35, 35) // scaled size
-
-
         }
     });
+
     google.maps.event.addListener(marker2, 'click', function () {
         infowindow.setContent('Av. Sanchez Cerro (lateral) 252, Piura');
         infowindow.open(mapa, marker2);
     });
-
 
 
     for (var i = 2; i < array_markers.length; i++) {
@@ -124,7 +118,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, array_ma
             window.alert('Directions request failed due to ' + status);
         }
     });
-
 
 
 }
@@ -177,54 +170,114 @@ function computeTotalDistance(result) {
 var myVar = setInterval(myTimer, 10000);
 var step = 0;
 var cont = 0;
+var ubicacion_carro = "";
 function myTimer() {
-    //cont++;
-    
     var data = [];
     data = data_all;
-    console.log(data);
+    //console.log(data);
 
+//     if (data.length > 1) {
+//         console.log(cont);
+//         if (data.length === step) {
+//             alert("Ruta terminada");
+//             clearInterval(myVar);
+//         } else {
+//             if (data[step].steps.length === cont) {
+//                 step++;
+//                 cont = 0;
+//             }
+//             var postion_step = data[step].steps[cont].start_location;
+//             //console.log(postion_step);
+//             carro.setMap(null);
+// //    var d = new Date();
+// //    var a = d.toLocaleTimeString();
+//
+//             carro = new google.maps.Marker({
+//                 position: postion_step,
+//                 map: mapa,
+//                 //title: direccion,
+//                 icon: {
+//                     url: "../images/vehiculo.png",
+//                     scaledSize: new google.maps.Size(20, 20) // scaled size
+//                 },
+//                 //draggable: true
+//             });
+//
+//             carro.setMap(mapa);
+//             cont++;
+//
+//         }
+//
+//
+//     }
     if (data.length > 1) {
-        console.log(cont);
-        if (data.length === step) {
-            alert("Ruta terminada");
-            clearInterval(myVar);
-        } else {
-            if (data[step].steps.length === cont) {
-                step++;
-                cont = 0;
-            }
-            var postion_step = data[step].steps[cont].start_location;
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                geocoder = new google.maps.Geocoder();
+                geocoder.geocode({'latLng': pos}, function(results, status) {
+                    if (status == 'OK') {
+                        //console.log(results[0]);
+                        mapa.setCenter(results[0].geometry.location);
+                        ubicacion_carro =  results[0].formatted_address;
+                        carro = new google.maps.Marker({
+                            //position: postion_step,
+                            position: pos,
+                            map: mapa,
+                            title: contentString + '' + results[0].formatted_address,
+                            icon: {
+                                url: "../images/vehiculo.png",
+                                scaledSize: new google.maps.Size(20, 20) // scaled size
+                            },
 
-            //console.log(postion_step);
-            carro.setMap(null);
-//    var d = new Date();
-//    var a = d.toLocaleTimeString();
+                            //draggable: true
+                        });
+                        console.log("move");
+                        //carro.setMap(mapa);
 
-            carro = new google.maps.Marker({
-                position: postion_step,
-                map: mapa,
-                //title: direccion,
-                icon: {
-                    url: "../images/vehiculo.png",
-                    scaledSize: new google.maps.Size(20, 20) // scaled size
-                },
-                //draggable: true
+
+                    } else {
+                        alert('Geocode was not successful for the following reason: ' + status);
+                    }
+                });
+
+
+                //console.log(carro);
+
+                //
+                // var geocoder = new google.maps.Geocoder();
+                // // le asignamos una funcion al eventos dragend del marcado;
+                // google.maps.event.addListener(carro, 'dragend', function() {
+                //     geocoder.geocode({'latLng': pos}, function(results, status) {
+                //         console.log("ento1");
+                //         if (status == google.maps.GeocoderStatus.OK) {
+                //             var address=results[0]['formatted_address'];
+                //             console.log(address);
+                //
+                //             //alert(address);
+                //         }
+                //     });
+                // });
+
+            }, function () {
+                handleLocationError(true, infoWindow, map.getCenter());
             });
-
-            carro.setMap(mapa);
-            cont++;
-
+        } else {
+            handleLocationError(false, infoWindow, map.getCenter());
         }
 
-
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+        }
     }
-
-
-
-
-
 }
+
 
 //var myVar = setInterval(myTimer ,1000);
 //function myTimer() {
@@ -234,7 +287,6 @@ function myTimer() {
 //    
 //    //document.getElementById("demo").innerHTML = d.toLocaleTimeString();
 //}
-
 
 
 //function limpiar_mapa() {

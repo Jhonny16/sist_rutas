@@ -93,7 +93,7 @@ function listar_rutas() {
     });
 }
 
-
+var contentString = '';
 function lista_trayectoria(id) {
     array_mark = [];
     init_mapa();
@@ -118,13 +118,14 @@ function lista_trayectoria(id) {
 
     var unidad = array_ruta.datos[aux].unidad;
     var chofer = array_ruta.datos[aux].chofer;
-    var contentString = '<b>Unidad:</b>' + unidad + '<br>\n\
-                         <b>Chofer:</b>' + chofer + ' ';
+    contentString = '<b>Unidad:</b>' + unidad + '<br>\n\
+                        \<b>Chofer:</b>' + chofer + '<br>\n\
+                          ';
 
     var myLatLng = {lat: -6.78045319652979, lng: -79.83708406994054};
     carro = new google.maps.Marker({
         position: myLatLng,
-        map: mapa,
+        //map: mapa,
         //title: direccion,
         icon: {
             url: "../images/vehiculo.png",
@@ -141,9 +142,7 @@ function lista_trayectoria(id) {
         content: contentString
     });
 
-    carro.setMap(mapa);
-    
-    
+    //carro.setMap(mapa);
     
     $.post
             (
