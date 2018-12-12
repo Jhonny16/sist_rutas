@@ -31,7 +31,7 @@
                     <li><a href="principal.view.php"><i class="fa fa-desktop"></i> Principal </a>
                     </li>
                     <?php
-                    if ($codigoTipoUsuario != 4 ) {
+                    if ($codigoTipoUsuario != 4) {
                         echo '<li><a><i class="fa fa-user-plus"></i>Mantenimientos<span class="fa fa-chevron-down"></span></a><ul class="nav child_menu">';
 
 
@@ -51,7 +51,7 @@
 
                         echo '</ul></li>';
                     }
-                ?>
+                    ?>
 
                     <?php
                     if ($codigoTipoUsuario == '1' || $codigoTipoUsuario == '2' || $codigoTipoUsuario == '3' || $codigoTipoUsuario == '5') {
@@ -76,27 +76,36 @@
 
                             if ($codigoTipoUsuario == '4') {
 
-                            echo '<li><a href="preventa_cliente.lista.view.php">Lista Pre-Ventas</a></li>';
+                                echo '<li><a href="preventa_cliente.lista.view.php">Lista Pre-Ventas</a></li>';
                             }
                             ?>
 
                         </ul>
                     </li>
 
-
-                    <?php
-                    if ($codigoTipoUsuario == '1' || $codigoTipoUsuario == '2' || $codigoTipoUsuario == '5' || $codigoTipoUsuario == '3') {
-                        echo '   <li><a><i class="fa fa-truck"></i>Devolución<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-truck"></i>Devolución<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="devolucion.php">Nueva Devolución</a></li>
+                            <?php
+                            if ($codigoTipoUsuario == '1' || $codigoTipoUsuario == '2' || $codigoTipoUsuario == '5' || $codigoTipoUsuario == '3') {
+                                echo '<li><a href="devolucion.php">Nueva Devolución</a></li>
                             <li><a href="devolucion_seguimiento.lista.view.php">Seguimiento Devoluciones</a></li>';
-                echo ' </ul>
-                    </li> ';
+                            }
+
+
+                            if ($codigoTipoUsuario == '4') {
+
+                                echo '<li><a href="devolucioncliente_seguimiento.lista.view.php">Seguimiento Devoluciones</a></li>';
+                            }
+                            ?>
+
+
+                        </ul>
+                    </li>
 
                     }
                     ?>
                     <?php
-                    if ($codigoTipoUsuario != 4 ) {
+                    if ($codigoTipoUsuario != 4) {
                         echo '<li><a><i class="fa fa-map-marker"></i>Rutas<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">';
                         if ($codigoTipoUsuario == '1' || $codigoTipoUsuario == '2' || $codigoTipoUsuario == '6') {

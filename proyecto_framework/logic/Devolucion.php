@@ -322,6 +322,35 @@ class Devolucion extends Conexion
         } catch (Exception $exc) {
             throw $exc;
         }
+
+    }
+
+    public function listaxlcliente($fecha_1, $fecha2, $persona_id, $state) {
+        try {
+            $sql = "select dev.id,pre.code as pedido ,dev.code as devolucion, dev.fecha, dev.motivo, dev.descripcion,dev.tiempo_maximo,
+                    dev.estado, dev.responsable,
+                      (case when p.apellidos = '' then cli.razon_social else p.apellidos||' '||p.cliente end ) as cliente,
+                      z.nombre as zona
+                    from devolucion dev inner join detalle_dev det on dev.id = det.devolucion_id
+                    inner join pre_venta pre on pre.id = dev.pedido_id
+                    inner join cliente cli on cli.id = pre.id_cliente inner join zona z on cli.id_zona = z.id
+                    inner join persona p on cli.id_persona = p.id
+                    where 
+                    (dev.fecha between :p_fecha1 and :p_fecha2) and 
+                    (case when :p_state = '0' then true else dev.estado = :p_state end)  
+                    and p.id = :p_persona ";
+
+            $sentencia = $this->dblink->prepare($sql);
+            $sentencia->bindParam(":p_fecha1",$fecha_1);
+            $sentencia->bindParam(":p_fecha2", $fecha2);
+            $sentencia->bindParam(":p_persona", $persona_id);
+            $sentencia->bindParam(":p_state", $state);
+            $sentencia->execute();
+            $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+            return $resultado;
+        } catch (Exception $exc) {
+            throw $exc;
+        }
     }
 
 
