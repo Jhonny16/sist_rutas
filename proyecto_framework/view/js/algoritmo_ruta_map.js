@@ -167,7 +167,7 @@ function computeTotalDistance(result) {
 }
 
 
-var myVar = setInterval(myTimer, 10000);
+var myVar = setInterval(myTimer, 60000);
 var step = 0;
 var cont = 0;
 var ubicacion_carro = "";
@@ -227,7 +227,9 @@ function myTimer() {
                             //position: postion_step,
                             position: pos,
                             map: mapa,
-                            title: unidad + ' / ' + results[0].formatted_address,
+                            title: unidad + ' / ' +
+
+                            results[0].formatted_address,
                             icon: {
                                 url: "../images/vehiculo.png",
                                 scaledSize: new google.maps.Size(20, 20) // scaled size

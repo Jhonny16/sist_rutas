@@ -124,6 +124,42 @@ class PreVenta extends Conexion {
         }
     }
 
+    public function listarxlciente($p_fecha, $p_fecha1, $p_fecha2,$persona_id, $estado) {
+        try {
+            $sql = "
+                    select                     
+                    pv.id, ( case when p.apellidos = '' then c.razon_social else p.apellidos ||' '|| p.nombres  end ) as cliente,
+                    (case when di.direccion_completa != '' then di.direccion_completa else p.direccion end) as direccion,
+                    pv.fecha ||' / '|| pv.hora as fecha_hora , pv.igv, pv.sub_total,pv.total,
+                    (case when pv.estado = 'G' then 'Guardado' else 'Anulado' end ) as estado,
+                     per.apellidos ||' '|| per.nombres as usuario, z.nombre as zona,pv.fecha_entrega
+                    from
+                    pre_venta pv 
+                    inner join cliente c on c.id = pv.id_cliente
+                    left join direccion di on di.id_cliente = c.id
+                    inner join persona p on c.id_persona = p.id
+                    inner join usuario u on u.id = pv.id_usuario
+                    inner join persona per on u.id_persona = per.id
+                    inner join zona z on c.id_zona = z.id
+                    where 
+                     (case when  :p_fecha=1 then  (pv.fecha between :p_fecha1 and :p_fecha2)
+                     else (pv.fecha_entrega between :p_fecha1 and :p_fecha2 )end) and                  
+                    (pv.estado_seguimiento = :p_estado) and (p.id = :p_persona_id)
+                    order by 1 desc
+                ";
+            $sentencia = $this->dblink->prepare($sql);
+            $sentencia->bindParam(":p_fecha", $p_fecha);
+            $sentencia->bindParam(":p_fecha1", $p_fecha1);
+            $sentencia->bindParam(":p_fecha2", $p_fecha2);
+            $sentencia->bindParam(":p_persona_id", $persona_id);
+            $sentencia->bindParam(":p_estado", $estado);
+            $sentencia->execute();
+            $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+            return $resultado;
+        } catch (Exception $exc) {
+            throw $exc;
+        }
+    }
     public function registrarPreVenta() {
 
         $this->dblink->beginTransaction();
@@ -220,7 +256,7 @@ class PreVenta extends Conexion {
                     p.apellidos || ' '|| p.nombres as cliente
                     from pre_venta pv inner join cliente c on pv.id_cliente = c.id
                     inner join persona p on p.id = c.id_persona
-
+                    where pv.code != 'PV'
                 ";
 
             $sentencia = $this->dblink->prepare($sql);
